@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AirMedia Slideshow</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+  }
+
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .slide {
+    position: absolute;
+    inset: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: cycle 180s linear infinite;
+  }
+
+  .slide:nth-child(1) { background-image: url('https://raw.githubusercontent.com/engritgcaps/Airmedia/refs/heads/main/20150422-ENGCockrellLabs1Full-Richmond214.jpg'); animation-delay: 0s; }
+  .slide:nth-child(2) { background-image: url('https://raw.githubusercontent.com/engritgcaps/Airmedia/refs/heads/main/20150423-ENGCockrellLabs2Full-Richmond131.jpg'); animation-delay: 30s; }
+  .slide:nth-child(3) { background-image: url('https://raw.githubusercontent.com/engritgcaps/Airmedia/refs/heads/main/EERC-Ennead-2.jpg'); animation-delay: 60s; }
+  .slide:nth-child(4) { background-image: url('https://raw.githubusercontent.com/engritgcaps/Airmedia/refs/heads/main/Study-Lounge-18.jpg'); animation-delay: 90s; }
+  .slide:nth-child(5) { background-image: url('https://raw.githubusercontent.com/engritgcaps/Airmedia/refs/heads/main/Tailgate-2018-49.jpg'); animation-delay: 120s; }
+  .slide:nth-child(6) { background-image: url('https://raw.githubusercontent.com/engritgcaps/Airmedia/refs/heads/main/clock_knot.jpg'); animation-delay: 150s; }
+
+  @keyframes cycle {
+    0%       { opacity: 0; }
+    0.5%     { opacity: 1; }
+    16.1%    { opacity: 1; }
+    16.666%  { opacity: 0; }
+    100%     { opacity: 0; }
+  }
+</style>
+</head>
+<body>
+  <div class="slideshow">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+</body>
+</html>
